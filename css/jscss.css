@@ -140,3 +140,6 @@ button{
 .reset:hover{
   background-color: rgba(219, 86, 63, 1);  
 }
+.reset:disabled{
+  background-color: rgba(121, 104, 101, 0.5);
+}
