@@ -1,0 +1,142 @@
+*{
+	margin: 0%;
+	padding: 0%;
+	font-family: sans-serif;
+}
+header{
+	text-align: center;
+	background: #e8c77a;
+	padding-top: 2%;
+  padding-bottom: 2%;
+  position: relative;
+}
+header img{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+header h1{
+	text-align: center;
+	font-weight: bold;
+}
+header h2{
+	text-align: center;
+	font-weight: bold;
+}
+main{
+	background-image: url("../imagenes/js.gif");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;	
+}
+div.apartado{
+	width: 100%;
+	min-height: 200px;
+	background-color: rgba(226,225,186,0.3);
+}
+div.apartado h3.apartado{
+	text-align: center;
+	background-color: #eeefce;
+	font-size: large;
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
+}
+div.apartado h4{
+	padding: 0.5%;
+}
+div.apartado pre{
+	font-family: monospace;
+}
+div.apartado p{
+  padding: 0.5%;
+  text-align: center;
+}
+.Subapartados{
+width: 50%;
+margin-left: 25%;
+
+}
+.Subapartados li{
+  list-style: square;
+}
+footer{
+	width: 100%;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	background-color: #e8c77a;
+
+}
+footer p{
+	text-align: center;
+	font-weight: bold;
+}
+input, button{
+  margin-bottom: 10px;
+}
+.list, .form{
+	width: 49%;
+	display: inline-block;
+	
+}
+.cont{
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  border-top: 2px solid black;
+  position: relative;
+}
+.list{
+	margin: 0 auto;
+	background-color: rgba(239, 221, 184, 0.5);
+	margin-bottom: 10px;
+  min-height: 200px;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  
+}
+.form{
+	margin: 0 auto;
+	background-color: rgba(239, 221, 184, 0.5);
+	margin-bottom: 10px;
+}
+.form > *{
+	display: inline-block;
+	width: 99%;
+	height: 30px;
+}
+.form h3{
+  margin-top: 5px;
+  text-align: center;
+  text-decoration: underline;
+ 
+}
+.form label{
+  font-weight: bold;
+}
+.btn{
+	width: 100%;
+	display: table;
+}
+.btn >*{
+	display: table-cell;
+	width: 49%;
+}
+button{
+	height: 30px;
+	margin: 2px;	
+}
+.reset{
+  background-color: rgba(219, 86, 63, 0.5);
+  color: white;
+  border: 2px solid white;
+  border-radius: 3px;
+  
+}
+.reset:hover{
+  background-color: rgba(219, 86, 63, 1);  
+}

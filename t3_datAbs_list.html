@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <head>
+    <title>t3_datAbs_list.html</title>
+    <meta charset="UTF-8">
+    <meta name="autor" content="Jaime Matas Asensio">
+    <link rel="icon" type="image/x-icon" href="imagenes/jsicon.ico">
+    <link rel="stylesheet" href="css/jscss.css">
+  </head>
+    <body>
+      <header>
+        <img src="imagenes/jsicon.ico" alt="icono javaScript">
+        <h1>Datos Abstractos: lista</h1>
+        <h2>13 de Noviembre, 2017</h2>
+      </header>
+      <main>
+        <div class="apartado">
+          <h3 class="apartado">Crear una estructura de datos abstracta: lista</h3>
+          <p class = "Enunciado">Crear una estructura de datos abstracta lista. Condiciones:</p>
+          <ul class="Subapartados">
+            <li>No se debe utilizar ningun metodo de arrays relaccionada con las listas</li>
+            <li>Codigo debe ser reutilizabe</li>
+            <li>codigo para la escritura en la pagina y el codigo que desarrolla la funcion deben estar separados</li>
+            <li>Debe ser lo mas eficiente que sea posible</li>
+          </ul>
+          <div class="cont">
+
+            <div class="form">
+              <h3>Create List</h3>
+              <label for="ListLenght">Lenght of the list</label>
+              <input type="number" name="ListLenght" id="ListLength" min="0">
+              <button name="CreateList" id="CreateList" onclick="Start(document.getElementById('ListLength').value);"> Create List</button>
+              <button name="RestartList" id="RestartList" onclick="restart();" class="reset">Restart List</button>
+              
+            
+            <h3>List Controls</h3>
+              <label for="Element">Put the value of element or index:</label>
+              <input type="number" name="Number" id="Number">
+              <div class="btn">
+                <button name="AddElement" id="AddElement" onclick="addElem(document.getElementById('Number').value)">Add Element</button>
+                <button name="GetIndex" id="GetIndex" onclick="getInd(document.getElementById('Number').value)">Get Index</button>
+                <button name="GetElement" id="GetElement" onclick="getElem(document.getElementById('Number').value)">Get Element</button>
+                <button name="RemoveElement" id="RemoveElement" onclick="rev(document.getElementById('Number').value)">Remove Element</button>
+                <button name="RemoveAt" id="RemoveAt" onclick="revAt(document.getElementById('Number').value)">Remove Element at Index</button>
+                <button name="LastIndex" id="LastIndex" onclick="LastInd(document.getElementById('Number').value)">Last Index of Element</button>
+                <button name="FirstIndex" id="FirstIndex" onclick="FirstInd(document.getElementById('Number').value)">First Index of Element</button>
+                <button name="FillRandom" id="FillRandom" onclick="fillList()">Fill list</button>
+                <button name="ClearList" id="ClearList" onclick="clearList()">Clear List</button>
+              </div>
+
+              <h3>Add an Element at the list index</h3>
+              <label for="Elem">Element</label>
+              <input type="number" name="Elem" id="Elem">
+              <label for="Index">Index</label>
+              <input type="number" name="Index" id="Index">
+              <button name="AddAt" id="AddAt" onclick="AddElement(document.getElementById('Elem').value,document.getElementById('Index').value)">Add Element at List Index</button>
+            </div>
+          
+            <div class="list">
+              <p id="list"></p>
+              <p id="tString"></p>
+              <p id="result"></p>
+            </div>
+          </div>
+      </main>
+      <footer>
+        <p>Jaime Matas Asensio</p>
+        <p>Desarrollo Web en Entorno Cliente</p>
+      </footer>
+    </body>
+<!-- El js va aqui -->
+
+<script type="text/javascript" src="js/t3_datAbs_list.js"></script>
+<script type="text/javascript" src="js/t3_html_controls.js"></script>
+
+</html>
