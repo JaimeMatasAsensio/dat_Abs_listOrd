@@ -82,6 +82,23 @@ function size(array)
   return i ;
 }
 
+/*FUNCION NECESARIAS PARA ORDENAR*/
+
+function bubble(array){
+  
+  for(var i=0;i<(size(array));i++)
+  
+  for(var j=0;j<(size(array)-i);j++){
+  
+      if(array[j]>array[j+1]){
+            var aux=array[j];
+           array[j]=array[j+1];
+           array[j+1]=aux;
+      }
+  }
+  return array
+}
+
 function add(array,element)
 /*Funcion que añade un elemento al final de la lista. Devuelve el tamaño de la lista*/
 {
@@ -95,6 +112,7 @@ function add(array,element)
       }
       i++;
     }
+    array = bubble(array);
     return size(array);
   }else{
     throw "Array is full or element isn`t a number.";
@@ -115,6 +133,7 @@ function addAt(array,element,index)
       aux = aux1;
       i++;
     }
+    array = bubble(array);
     return size(array);
   }else{
     throw "Index out of the range, element isn`t a number or list is full."
@@ -144,6 +163,7 @@ libre al final de la misma*/
       index++;
     }
     array[index] = NaN;
+    array = bubble(array);
     return element;
   }else{
     throw "Index out of list range or empty list.";
@@ -249,6 +269,7 @@ function RemoveElement(array,element)
     if(removed){
       Remove(array,IndexOf(array,element));
     }
+    array = bubble(array);
     return removed;
     
   }else{
@@ -263,6 +284,7 @@ function FillRandom(array,limit)
   for (var i = 0; i < listLength; i++) {
     array[i] = parseInt(Math.random()*limit + 1);
   }
+  array = bubble(array);
   return size(array);
 }
 
@@ -310,27 +332,16 @@ function test()
   console.log("Indice del elemento 8 (LastIndexOf): " + LastIndexOf(list,8));
   console.log("Capacidad de la lista(capacity): "+ Capacity(list));
   console.log("Primer elemento a de la lista (FirstElement): " + FirstElement(list));
-
   console.log("Primer elemento a de la lista (LastElement): " + LastElement(list));
-
   console.log("Eliminamos un elemento de la lista: " + RemoveElement(list,8) );
-
   console.log("Eliminamos un elemento de la lista: " + RemoveElement(list,8) );
-
   console.log("Elementos en la lista(ToString), con la lista casi llena: " + ToString(list));
-
   console.log("Vaciamos la lista (Clear): " + clear(list));
-
   console.log("Llenamos la lista de valores aleatorios sin pasar limite por parametro (FillRandom): " + FillRandom(list));
-
   console.log("Mostramos los valores de la lista en una cadena: " + ToString(list));
-
   console.log("Vaciamos la lista: " + clear(list));
-
   console.log("Llenamos la lista de valores aleatorios pasando un limite por parametro (FillRandom): " + FillRandom(list,100));
-
-  console.log("Mostramos los valores de la lista en una cadena: " + ToString(list));
-
+  console.log("Mostramos los valores de la lista sin ordenar en una cadena: " + list);
   
 }
 
