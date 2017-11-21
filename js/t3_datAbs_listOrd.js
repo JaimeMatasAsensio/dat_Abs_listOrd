@@ -119,9 +119,9 @@ function add(array,element)
   }
   
 }
-
+/*
 function addAt(array,element,index)
-/*Funcion que añade un elemento en la posicion indicada de la lista. Devuelve el tamaño de la lista*/
+//Funcion que añade un elemento en la posicion indicada de la lista. Devuelve el tamaño de la lista
 {
   if(indexIn(index) && isNumber(element) && !isFull(array)){
     var i = index;
@@ -139,7 +139,7 @@ function addAt(array,element,index)
     throw "Index out of the range, element isn`t a number or list is full."
   }
 }
-
+*/
 function get(array,index)
 /*Funcion que devuelve un elemento indicando su posicion en la lista, sin consumirlo*/
 {
@@ -202,8 +202,9 @@ function IndexOf(array,elem)
     throw "Element isn`t a number."      
   }
 }
+/*
 function LastIndexOf(array,elem)
-/*Funcion que muestra por pantalla el indice de la ultima aparicion de un elemento en la lista*/
+//Funcion que muestra por pantalla el indice de la ultima aparicion de un elemento en la lista
 {
   var index = -1;
   if(isNumber(elem)){
@@ -222,6 +223,7 @@ function LastIndexOf(array,elem)
     throw "Element isn`t a number."
   }  
 }
+*/
 function Capacity(array)
 /*Funcion que devuelve la capacidad de la lista*/
 {
@@ -326,13 +328,13 @@ function test()
     console.log("Error: " + error);
   }
 
-  console.log("Insertar un elemento dentro de la lista(addAt): " + addAt(list,8,2));
+  //console.log("Insertar un elemento dentro de la lista(addAt): " + addAt(list,8,2));
   console.log("Elementos en la lista(ToString): " + ToString(list));
   console.log("Indice del elemento 3 (IndexOf): " + IndexOf(list,3));
-  console.log("Indice del elemento 8 (LastIndexOf): " + LastIndexOf(list,8));
+  //console.log("Indice del elemento 8 (LastIndexOf): " + LastIndexOf(list,8));
   console.log("Capacidad de la lista(capacity): "+ Capacity(list));
   console.log("Primer elemento a de la lista (FirstElement): " + FirstElement(list));
-  console.log("Primer elemento a de la lista (LastElement): " + LastElement(list));
+  //console.log("Ultimo elemento a de la lista (LastElement): " + LastElement(list));
   console.log("Eliminamos un elemento de la lista: " + RemoveElement(list,8) );
   console.log("Eliminamos un elemento de la lista: " + RemoveElement(list,8) );
   console.log("Elementos en la lista(ToString), con la lista casi llena: " + ToString(list));
